@@ -29,6 +29,20 @@ class Empresa
     }
 
 
+    public function toArray(): array
+    {
+        return [
+            'id_empresa' => $this->id_empresa,
+            'rif' => $this->rif,
+            'razon_social' => $this->razon_social,
+            'direccion' => $this->direccion,
+            'telefono' => $this->telefono,
+            'fecha_creacion' => $this->fecha_creacion,
+            'activo' => $this->activo
+        ];
+    }
+
+
 
 
 
