@@ -1,9 +1,9 @@
-//Crear Base de datos
+--Crear Base de datos
 CREATE DATABASE IF NO EXISTS empresa_db;
 USE empresa_db;
 
 
-//Tabla empresa con borrado logico
+-- Tabla empresa con borrado logico
 CREATE TABLE empresa(
     id_empresa INT AUTO_INCREMENT PRIMARY KEY,
     rif VARCHAR(20) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE empresa(
 );
 
 
-//Datos de ejemplo
+--Datos de ejemplo
 INSERT INTO empresa (rif, razon_social, direccion, telefono) VALUES
 ('J-12345678-9', 'Empresa Uno C.A.', 'Calle Falsa 123, Ciudad', '0212-1234567'),
 ('J-98765432-1', 'Empresa Dos S.A.', 'Avenida Siempre Viva 742, Ciudad', '0212-7654321'),
