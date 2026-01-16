@@ -1,0 +1,19 @@
+# Dependencias
+/vendor/
+
+# Variables de entorno (contiene credenciales)
+.env
+
+# Cache y logs
+*.log
+*.cache
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Composer
+composer.lock
