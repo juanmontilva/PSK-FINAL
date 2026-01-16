@@ -20,6 +20,11 @@ class EmpresaController extends Controller
         $this->validator = new EmpresaValidator();
     }
 
+    public function index(): void
+    {
+        $this->view('empresas/index');
+    }
+
 
 
     //GET /api/empresas - Listar empresas

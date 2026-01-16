@@ -27,15 +27,15 @@ class EmpresaRepository
 
         if ($search !== null && $search !== ''){
             if(is_numeric($search)){
-                $sql .= "AND id_empresa = :id";
+                $sql .= " AND id_empresa = :id";
                 $params[':id'] = $search;
             } else {
-                $sql .="AND LOWER(razon_social) LIKE LOWER(:razon)";
+                $sql .= " AND LOWER(razon_social) LIKE LOWER(:razon)";
                 $params[':razon'] = '%' . $search . '%';
             }
         }
 
-        $sql .= "ORDER BY fecha_creacion DESC";
+        $sql .= " ORDER BY fecha_creacion DESC";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($params);

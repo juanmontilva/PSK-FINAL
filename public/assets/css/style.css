@@ -22,3 +22,45 @@
 .btn-group-actions{
     white-space: nowrap;
 }
+
+
+.btn-group-actions .btn {
+    margin-right: 4px;
+}
+
+/* Modal */
+.modal-header {
+    background-color: #f8f9fa;
+}
+
+/* Alertas */
+.alert {
+    margin-top: 10px;
+}
+
+/* Tabla */
+.table th {
+    vertical-align: middle;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Total registros */
+#totalRegistros {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .col-md-6.text-end {
+    text-align: left !important;
+    margin-top: 10px;
+    }
+
+    .search-box {
+    max-width: 100%;
+    }
+}

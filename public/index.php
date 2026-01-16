@@ -26,21 +26,24 @@ if (($_ENV['APP_DEBUG'] ?? 'false') === 'true'){
 
 
 //crear un router
+$router = new Router();
 //RUTAS DE LA APLICACION
 
 //vista principal
-$router->get('/', [EmpresaController::class, 'list']);
+$router->get('/', [EmpresaController::class, 'index']);
 
 //API LO QUE ES CRUD DE EMPRESA
 $router->get('/api/empresas', [EmpresaController::class, 'list']);
+
+//API EXPORTACION PDF-JSON (deben ir ANTES de {id})
+$router->get('/api/empresas/export.json', [EmpresaController::class, 'exportJson']);
+$router->get('/api/empresas/report.pdf', [EmpresaController::class, 'reportPdf']);
+
+//Rutas con parámetro {id} al final
 $router->get('/api/empresas/{id}', [EmpresaController::class, 'show']);
 $router->post('/api/empresas', [EmpresaController::class, 'store']);
 $router->put('/api/empresas/{id}', [EmpresaController::class, 'update']);
 $router->delete('/api/empresas/{id}', [EmpresaController::class, 'destroy']);
-
-//API EXPORTACION PDF-JSON
-$router->get('/api/empresas/export.json', [EmpresaController::class, 'exportJson']);
-$router->get('/api/empresas/report.pdf', [EmpresaController::class, 'reportPdf']);
 
 //despachar la ruta o solicitud
 $router->dispatch();
